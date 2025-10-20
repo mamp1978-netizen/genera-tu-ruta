@@ -1,0 +1,15 @@
+import streamlit as st
+
+st.set_page_config(page_title="Genera tu Ruta", layout="wide")
+
+st.title("🚗 Genera tu Ruta")
+st.markdown("Bienvenido a la versión web de la app **Genera tu Ruta**.")
+
+# Ejemplo de contenido temporal
+with st.form("form_ruta"):
+    origen = st.text_input("Origen")
+    destino = st.text_input("Destino")
+    enviar = st.form_submit_button("Generar ruta")
+
+    if enviar and origen and destino:
+        st.success(f"Ruta generada desde {origen} hasta {destino}")
